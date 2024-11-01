@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'root',
         'PASSWORD': 'eaIJbJRrSUTfXocYqAPZqwHJOagVwFPn',
-        'HOST': 'mysql.railway.internal',
+        'HOST': 'mysql.railway.app',
         'PORT': '3306',
     }
 }
