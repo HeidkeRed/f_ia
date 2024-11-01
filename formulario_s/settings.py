@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'formulario_s.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'f',
+        'NAME': 'railway',
         'USER': 'root',
-        'PASSWORD': '123456789',
-        'HOST': 'localhost',
-        'PORT': '3307',
+        'PASSWORD': 'xtZZtmXGhNWcgRghfFgcbvTyqjhkDphC',
+        'HOST': 'mysql.railway.internal',
+        'PORT': '3306',
     }
 }
 
