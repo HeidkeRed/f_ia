@@ -23,4 +23,4 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 # Comando por defecto para ejecutar la aplicación en formato JSON
-CMD ["python", "your_app.py"]  # Reemplaza 'your_app.py' con el nombre de tu archivo principal
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"] # Reemplaza 'your_app.py' con el nombre de tu archivo principal
