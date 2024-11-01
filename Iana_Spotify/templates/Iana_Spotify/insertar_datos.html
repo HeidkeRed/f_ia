@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Artistas y Canciones</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <h1>Formulario de Artistas y Canciones</h1>
+    <form method="POST" action="{% url 'insertar_datos' %}">
+        {% csrf_token %}
+
+        <!-- Primer Artista -->
+        <fieldset>
+            <legend>Primer Artista</legend>
+            <label for="artista1">Nombre del Artista:</label>
+            <input type="text" id="artista1" name="artista1" required>
+        
+            <h3>Cinco Canciones Favoritas:</h3>
+            <input type="text" name="cancion1_artista1" placeholder="Canción 1" required>
+            <input type="text" name="cancion2_artista1" placeholder="Canción 2" required>
+            <input type="text" name="cancion3_artista1" placeholder="Canción 3" required>
+            <input type="text" name="cancion4_artista1" placeholder="Canción 4" required>
+            <input type="text" name="cancion5_artista1" placeholder="Canción 5" required>
+        
+            <h3>Cinco Canciones Similares:</h3>
+            <div class="similar-container">
+                <div class="similar-item">
+                    <span>Similar 1:</span>
+                    <input type="text" name="similars1" placeholder="Canción Similar 1" required>
+                    <input type="text" name="similars_artist1" placeholder="Artista Similar 1" required>
+                </div>
+                <div class="similar-item">
+                    <span>Similar 2:</span>
+                    <input type="text" name="similars2" placeholder="Canción Similar 2" required>
+                    <input type="text" name="similars_artist2" placeholder="Artista Similar 2" required>
+                </div>
+                <div class="similar-item">
+                    <span>Similar 3:</span>
+                    <input type="text" name="similars3" placeholder="Canción Similar 3" required>
+                    <input type="text" name="similars_artist3" placeholder="Artista Similar 3" required>
+                </div>
+                <div class="similar-item">
+                    <span>Similar 4:</span>
+                    <input type="text" name="similars4" placeholder="Canción Similar 4" required>
+                    <input type="text" name="similars_artist4" placeholder="Artista Similar 4" required>
+                </div>
+                <div class="similar-item">
+                    <span>Similar 5:</span>
+                    <input type="text" name="similars5" placeholder="Canción Similar 5" required>
+                    <input type="text" name="similars_artist5" placeholder="Artista Similar 5" required>
+                </div>
+            </div>
+        </fieldset>
+        
+
+        <!-- Segundo Artista -->
+<fieldset>
+    <legend>Segundo Artista</legend>
+    <label for="artista2">Nombre del Artista:</label>
+    <input type="text" id="artista2" name="artista2" required>
+
+    <h3>Cinco Canciones Favoritas:</h3>
+    <input type="text" name="cancion1_artista2" placeholder="Canción 1" required>
+    <input type="text" name="cancion2_artista2" placeholder="Canción 2" required>
+    <input type="text" name="cancion3_artista2" placeholder="Canción 3" required>
+    <input type="text" name="cancion4_artista2" placeholder="Canción 4" required>
+    <input type="text" name="cancion5_artista2" placeholder="Canción 5" required>
+
+    <h3>Cinco Canciones Similares:</h3>
+    <div class="similar-container">
+        <div class="similar-item">
+            <span>Similar 1:</span>
+            <input type="text" name="similars6" placeholder="Canción Similar 1" required>
+            <input type="text" name="similars_artist6" placeholder="Artista Similar 1" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 2:</span>
+            <input type="text" name="similars7" placeholder="Canción Similar 2" required>
+            <input type="text" name="similars_artist7" placeholder="Artista Similar 2" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 3:</span>
+            <input type="text" name="similars8" placeholder="Canción Similar 3" required>
+            <input type="text" name="similars_artist8" placeholder="Artista Similar 3" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 4:</span>
+            <input type="text" name="similars9" placeholder="Canción Similar 4" required>
+            <input type="text" name="similars_artist9" placeholder="Artista Similar 4" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 5:</span>
+            <input type="text" name="similars10" placeholder="Canción Similar 5" required>
+            <input type="text" name="similars_artist10" placeholder="Artista Similar 5" required>
+        </div>
+    </div>
+</fieldset>
+
+<!-- Tercer Artista -->
+<fieldset>
+    <legend>Tercer Artista</legend>
+    <label for="artista3">Nombre del Artista:</label>
+    <input type="text" id="artista3" name="artista3" required>
+
+    <h3>Cinco Canciones Favoritas:</h3>
+    <input type="text" name="cancion1_artista3" placeholder="Canción 1" required>
+    <input type="text" name="cancion2_artista3" placeholder="Canción 2" required>
+    <input type="text" name="cancion3_artista3" placeholder="Canción 3" required>
+    <input type="text" name="cancion4_artista3" placeholder="Canción 4" required>
+    <input type="text" name="cancion5_artista3" placeholder="Canción 5" required>
+
+    <h3>Cinco Canciones Similares:</h3>
+    <div class="similar-container">
+        <div class="similar-item">
+            <span>Similar 1:</span>
+            <input type="text" name="similars11" placeholder="Canción Similar 1" required>
+            <input type="text" name="similars_artist11" placeholder="Artista Similar 1" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 2:</span>
+            <input type="text" name="similars12" placeholder="Canción Similar 2" required>
+            <input type="text" name="similars_artist12" placeholder="Artista Similar 2" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 3:</span>
+            <input type="text" name="similars13" placeholder="Canción Similar 3" required>
+            <input type="text" name="similars_artist13" placeholder="Artista Similar 3" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 4:</span>
+            <input type="text" name="similars14" placeholder="Canción Similar 4" required>
+            <input type="text" name="similars_artist14" placeholder="Artista Similar 4" required>
+        </div>
+        <div class="similar-item">
+            <span>Similar 5:</span>
+            <input type="text" name="similars15" placeholder="Canción Similar 5" required>
+            <input type="text" name="similars_artist15" placeholder="Artista Similar 5" required>
+        </div>
+    </div>
+</fieldset>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
+

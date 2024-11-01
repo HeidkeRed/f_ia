@@ -1,0 +1,80 @@
+/* Estilos generales */
+/* Estilos generales */
+body {
+    display: grid;
+    place-items: center; /* Centra horizontal y verticalmente */
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b);
+    background-size: 300% 300%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+
+/* Animación de fondo */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Contenedor del formulario */
+form {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 90%; /* Ajustado */
+    max-width: 400px; /* Limite de ancho */
+}
+
+/* Estilos de los campos del formulario */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilos del botón */
+button {
+    background-color: #ff7e5f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+
+.similar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.similar-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.similar-item span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.similar-item input {
+    margin: 5px 0;
+    width: 100%;
+    padding: 8px;
+}

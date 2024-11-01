@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éxito</title>
+  
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .mensaje-exito {
+            text-align: center;
+            background-color: #dff0d8;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+            padding: 20px;
+            width: 300px;
+        }
+        .foto-circular {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-size: cover;
+            opacity: 0;
+            animation: aparecerFoto 2s forwards, rotarImagenes 14s infinite;
+        }
+        h1 {
+            color: #3c763d;
+        }
+        p {
+            color: #3c763d;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #5cb85c;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #4cae4c;
+        }
+
+        /* Animación de entrada */
+        @keyframes aparecerFoto {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Animación para cambiar de imagen */
+        @keyframes rotarImagenes {
+            0% { background-image: url("https://ca-times.brightspotcdn.com/dims4/default/f44b3ec/2147483647/strip/true/crop/10000x10000+0+0/resize/1200x1200!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fa4%2Fea%2F8a77542744b7ba915540c26f33e9%2Fet-lana-del-rey-ocean-album-003.JPG"); }
+            25% { background-image: url("https://i.pinimg.com/474x/33/b5/81/33b58191bc50ff10e20fec03f60f3a17.jpg"); }
+            50% { background-image: url("https://i.scdn.co/image/ab67616d0000b273193c2fafdce8f116b5ca0a78"); }
+            75% { background-image: url("https://www.thetimes.com/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2Fc23f0d64-0060-11ee-91d8-175820cfdf88.jpg?crop=1500%2C1000%2C0%2C0"); }
+            100% { background-image: url("https://ca-times.brightspotcdn.com/dims4/default/f44b3ec/2147483647/strip/true/crop/10000x10000+0+0/resize/1200x1200!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fa4%2Fea%2F8a77542744b7ba915540c26f33e9%2Fet-lana-del-rey-ocean-album-003.JPG"); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="foto-circular"></div>
+        <div class="mensaje-exito">
+            <h1>¡Éxito!</h1>
+            <p>Los datos se han guardado correctamente.</p>
+            <a href="{% url 'insertar_datos' %}">Regresar al formulario</a>
+        </div>
+    </div>
+</body>
+</html>
