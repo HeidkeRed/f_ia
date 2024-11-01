@@ -1,17 +1,26 @@
-# Usa una imagen base de Python
+# Usa la imagen de Python 3.10 slim
 FROM python:3.10-slim
 
-# Establece el directorio de trabajo
-WORKDIR /app/
+# Actualiza el sistema e instala las dependencias necesarias
+RUN apt-get update && apt-get install -y \
+    default-libmysqlclient-dev \
+    gcc \
+    g++ \
+    pkg-config \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copia el archivo requirements.txt
+# Establece el directorio de trabajo
+WORKDIR /app
+
+# Copia el archivo requirements.txt al contenedor
 COPY requirements.txt .
 
-# Instala las dependencias directamente
-RUN pip install --no-cache-dir -r requirements.txt
+# Actualiza pip e instala las dependencias de Python
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 # Copia el resto de la aplicación
 COPY . .
 
-# Comando para ejecutar la aplicación
-CMD ["gunicorn", "formulario_s.wsgi:application"]
+# Comando por defecto para ejecutar la aplicación en formato JSON
+CMD ["python", "your_app.py"]  # Reemplaza 'your_app.py' con el nombre de tu archivo principal
