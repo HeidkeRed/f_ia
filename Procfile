@@ -1,1 +1,1 @@
-web: gunicorn formulario_s.wsgi
+web: pytnon manage.py && gunicorn formulario_s.wsgi
