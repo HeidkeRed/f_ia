@@ -1,1 +1,1 @@
-web: python manage.py migrate && gunicorn Iana_Spotify.wsgi:application
+web: python manage.py migrate && gunicorn formulario_s.wsgi:application
