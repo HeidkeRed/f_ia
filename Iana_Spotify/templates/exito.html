@@ -13,11 +13,14 @@
             align-items: center;
             height: 100vh;
             background-color: #f4f4f4;
+            margin: 0;
         }
         .container {
             display: flex;
             align-items: center;
             gap: 15px;
+            flex-direction: row;
+            padding: 20px;
         }
         .mensaje-exito {
             text-align: center;
@@ -25,7 +28,8 @@
             border: 1px solid #d6e9c6;
             border-radius: 5px;
             padding: 20px;
-            width: 300px;
+            max-width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
         .foto-circular {
             width: 120px;
@@ -37,9 +41,12 @@
         }
         h1 {
             color: #3c763d;
+            font-size: 1.8em;
+            margin: 0;
         }
         p {
             color: #3c763d;
+            margin: 10px 0;
         }
         a {
             display: inline-block;
@@ -49,6 +56,7 @@
             background-color: #5cb85c;
             padding: 10px 20px;
             border-radius: 5px;
+            transition: background-color 0.3s;
         }
         a:hover {
             background-color: #4cae4c;
@@ -74,14 +82,53 @@
             75% { background-image: url("https://www.thetimes.com/imageserver/image/%2Fmethode%2Fsundaytimes%2Fprod%2Fweb%2Fbin%2Fc23f0d64-0060-11ee-91d8-175820cfdf88.jpg?crop=1500%2C1000%2C0%2C0"); }
             100% { background-image: url("https://ca-times.brightspotcdn.com/dims4/default/f44b3ec/2147483647/strip/true/crop/10000x10000+0+0/resize/1200x1200!/format/webp/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fa4%2Fea%2F8a77542744b7ba915540c26f33e9%2Fet-lana-del-rey-ocean-album-003.JPG"); }
         }
+
+        /* Responsividad para pantallas pequeñas */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .foto-circular {
+                width: 100px;
+                height: 100px;
+            }
+            h1 {
+                font-size: 1.5em;
+            }
+            a {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            .foto-circular {
+                width: 80px;
+                height: 80px;
+            }
+            .mensaje-exito {
+                max-width: 100%;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.4em;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="foto-circular"></div>
         <div class="mensaje-exito">
-            <h1>¡Éxito!</h1>
-            <p>Los datos se han guardado correctamente.</p>
+            <h1>¡GRACIAS!</h1>
+            <p>Podrias volver a realizar la encuesta con diferentes canciones y artistas, sabes?.</p>
             <a href="{% url 'insertar_datos' %}">Regresar al formulario</a>
         </div>
     </div>
