@@ -1,1 +1,1 @@
-web: gunicorn formulario_s.wsgi
+web: python manage.py migrate && gunicorn formulario_s.wsgi
