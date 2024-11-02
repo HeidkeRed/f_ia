@@ -22,5 +22,5 @@ RUN pip install --upgrade pip && \
 # Copia el resto de la aplicación
 COPY . .
 
-CMD ["sh", "-c", "python manage.py migrate && gunicorn Iana_Spotify.wsgi:application --bind 0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py migrate && gunicorn formulario_s.wsgi:application --bind 0.0.0.0:8000"]
 
