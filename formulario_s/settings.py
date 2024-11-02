@@ -84,7 +84,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'WjgGSEMGBspDhvRjBnQPaETSkARROpdi',
         'HOST': 'autorack.proxy.rlwy.net',
-        'PORT': '3306',
+        'PORT': '15567',
     }
 }
 
